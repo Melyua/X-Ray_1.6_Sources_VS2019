@@ -55,7 +55,7 @@ void CUIRankingWnd::Show( bool status )
 		m_actor_ch_info->InitCharacter( Actor()->object_id() );
 		
 		string64 buf;
-		xr_sprintf( buf, sizeof(buf), "%d %s", Actor()->get_money(), "RU" );
+		xr_sprintf( buf, sizeof(buf), "%d %s", Actor()->get_money(), "UAH" );
 		m_money_value->SetText( buf );
 		m_money_value->AdjustWidthToText();
 		update_info();
