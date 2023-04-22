@@ -321,7 +321,7 @@ void CUIActorMenu::UpdateActor()
 	if ( IsGameTypeSingle() )
 	{
 		string64 buf;
-		xr_sprintf( buf, "%d RU", m_pActorInvOwner->get_money() );
+		xr_sprintf( buf, "%d UAH", m_pActorInvOwner->get_money() );
 		m_ActorMoney->SetText( buf );
 	}
 	else
@@ -367,7 +367,7 @@ void CUIActorMenu::UpdatePartnerBag()
 	}
 	else
 	{
-		xr_sprintf( buf, "%d RU", m_pPartnerInvOwner->get_money() );
+		xr_sprintf( buf, "%d UAH", m_pPartnerInvOwner->get_money() );
 		m_PartnerMoney->SetText( buf );
 	}	
 
@@ -394,8 +394,8 @@ void CUIActorMenu::UpdatePrices()
 	u32 partner_price = CalcItemsPrice( m_pTradePartnerList, m_partner_trade, false );
 
 	string64 buf;
-	xr_sprintf( buf, "%d RU", actor_price );		m_ActorTradePrice->SetText( buf );	m_ActorTradePrice->AdjustWidthToText();
-	xr_sprintf( buf, "%d RU", partner_price );	m_PartnerTradePrice->SetText( buf );	m_PartnerTradePrice->AdjustWidthToText();
+	xr_sprintf( buf, "%d UAH", actor_price );		m_ActorTradePrice->SetText( buf );	m_ActorTradePrice->AdjustWidthToText();
+	xr_sprintf( buf, "%d UAH", partner_price );	m_PartnerTradePrice->SetText( buf );	m_PartnerTradePrice->AdjustWidthToText();
 
 	float actor_weight   = CalcItemsWeight( m_pTradeActorList );
 	float partner_weight = CalcItemsWeight( m_pTradePartnerList );
